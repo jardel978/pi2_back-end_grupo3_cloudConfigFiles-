@@ -1,12 +1,6 @@
 spring:
-#  main:
-#    web-application-type: reactive
-#    allow-circular-references: true
   application:
     name: ms-gateway
-  config:
-    import: optional:configserver:http://ms-config-service:8888
-  #    import: optional:configserver:http://localhost:8888
   cloud:
     config:
       profile: ${MS_GATEWEAY_PROFILE:dev}
