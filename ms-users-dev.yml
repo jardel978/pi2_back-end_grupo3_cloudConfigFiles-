@@ -3,7 +3,7 @@ spring:
     oauth2:
       client:
         registration:
-          keycloak:
+          oauth2-client-credentials:
             provider: keycloak-provider
             client-id: ms-users-client
             scope: openid
