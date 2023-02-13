@@ -4,7 +4,7 @@ spring:
       client:
         registration:
           oauth2-client-credentials:
-            auth-server-url: http://localhost:8080
+            auth-server-url: http://localhost:8080/
             provider: keycloak-provider
             client-id: ms-users-client
             scope: openid
@@ -15,7 +15,8 @@ spring:
             token-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/token
       resource-server:
         jwt:
-          issuer-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8080/realms/DmhRealm
+          jwk-set-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/certs
 
 dmh:
   keycloak:
