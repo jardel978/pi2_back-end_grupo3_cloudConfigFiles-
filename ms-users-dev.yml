@@ -25,7 +25,7 @@ dmh:
     client-id: ms-users-client
     client-secret: ${KCK_USER_CLIENT_SECRET:0MF1GiXEtO6pn2Ky5UX4qUlZkwmxZVtX}
     username: ${KCK_MASTER_USERNAME:admin}
-    password: $KCK_MASTER_PASSWORD:admin}
+    password: ${KCK_MASTER_PASSWORD:admin}
 
 management:
   info:
