@@ -11,15 +11,15 @@ spring:
             client-secret: ${KCK_USER_CLIENT_SECRET:4VkJb1ZOgAMItGEDDhtRFPi89TzFU7cL}
         provider:
           keycloak-provider:
-            token-uri: http://localhost:8080/realms/dmhRealm/protocol/openid-connect/token
+            token-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/token
       resource-server:
         jwt:
-          issuer-uri: http://localhost:8080/realms/dmhRealm/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/certs
 
 dmh:
   keycloak:
     server-url: http://localhost:8080/auth
-    realm: dmhRealm
+    realm: DmhRealm
     client-id: ms-users-client
     client-secret: ${KCK_USER_CLIENT_SECRET:4VkJb1ZOgAMItGEDDhtRFPi89TzFU7cL}
 
