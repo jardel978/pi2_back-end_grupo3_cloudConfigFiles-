@@ -4,7 +4,7 @@ spring:
       client:
         registration:
           keycloak:
-            auth-server-url: http://localhost:8080/auth
+            auth-server-url: http://localhost:8080/realms/DmhRealm
             provider: keycloak-provider
             client-id: ms-users-client
             scope: openid
@@ -19,7 +19,7 @@ spring:
 
 dmh:
   keycloak:
-    server-url: http://localhost:8080/auth
+    server-url: http://localhost:8080/
     realm: DmhRealm
     client-id: ms-users-client
     client-secret: ${KCK_USER_CLIENT_SECRET:4VkJb1ZOgAMItGEDDhtRFPi89TzFU7cL}
