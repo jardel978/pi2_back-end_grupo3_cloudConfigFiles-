@@ -19,7 +19,7 @@ spring:
       client:
         provider:
           keycloak-provider:
-            issuer-uri: http://localhost:8080/realms/dmhRealm
+            issuer-uri: http://localhost:8080/realms/DmhRealm
         registration:
           keycloak-spring-gateway-client:
             provider: keycloak-provider
