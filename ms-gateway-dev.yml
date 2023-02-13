@@ -1,9 +1,5 @@
 spring:
-  application:
-    name: ms-gateway
   cloud:
-    config:
-      profile: ${MS_GATEWEAY_PROFILE:dev}
     gateway:
       default-filters:
         - TokenRelay

@@ -1,11 +1,4 @@
 spring:
-  application:
-    name: ms-users
-  config:
-  #    import: optional:configserver:http://localhost:8888
-  cloud:
-    config:
-      profile: ${MS_GATEWEAY_PROFILE:dev}
   security:
     oauth2:
       client:
@@ -25,7 +18,7 @@ spring:
 
 dmh:
   keycloak:
-    server-url: http://localhost:8080/
+    server-url: http://localhost:8080/auth
     realm: dmhRealm
     client-id: ms-users-client
     client-secret: ${KCK_USER_CLIENT_SECRET:4VkJb1ZOgAMItGEDDhtRFPi89TzFU7cL}
