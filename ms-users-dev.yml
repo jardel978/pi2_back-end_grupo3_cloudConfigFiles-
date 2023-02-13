@@ -4,6 +4,7 @@ spring:
       client:
         registration:
           oauth2-client-credentials:
+            auth-server-url: http://localhost:8080
             provider: keycloak-provider
             client-id: ms-users-client
             scope: openid
