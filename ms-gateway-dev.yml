@@ -7,7 +7,7 @@ spring:
         - id: ms-users
           uri: lb://MS-USERS
           predicates:
-            - Path=/**
+            - Path=/ms_users/**
 #        - id: ms-bill
 #          uri: lb://MS-BILLS:9191
 #          predicates:
