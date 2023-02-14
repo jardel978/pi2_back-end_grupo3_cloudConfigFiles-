@@ -5,7 +5,7 @@ spring:
         - TokenRelay
       routes:
         - id: ms-users
-          uri: lb://MS-USERS:8084
+          uri: lb://MS-USERS
           predicates:
             - Path=/users/**
 #        - id: ms-bill
