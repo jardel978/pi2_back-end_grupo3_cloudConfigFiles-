@@ -1,0 +1,45 @@
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak-provider:
+            issuer-uri: http://localhost:8080/realms/DmhRealm
+        registration:
+          keycloak-spring-gateway-client:
+            provider: keycloak-provider
+            scope: openid
+            client-id: ms-account-client
+            client-secret: ${KCK_ACCOUNT_CLIENT_SECRET:2EsaCfgAhbQQrB45LyGHmyw9R3U1M7Uu}
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
+      resource-server:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/DmhRealm
+          jwk-set-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/certs
+  data:
+    mongodb:
+      uri: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${HOST:localhost}:${MONGO_PORT:27017}/mongo-account
+
+
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+info:
+  name: Servico de contas no ecossistema da aplicacao.
+  author: Grupo 03
+  severity: Alto
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+  pattern:
+    dateformat: 'dd-MM-yyyy HH:mm:ss.SSS'
+    console: '%clr(%d{"dd-MM-yyyy''T''HH:mm:ss"}){faint} %highlight(%clr(${LOG_LEVEL_PATTERN:-%5p})) %clr(${PID:- })
+    %clr(---){faint} %clr([%15.15t]){faint} %clr([%-40.40logger{39}]:%line){cyan} %clr(-){faint} %m%n%wEx'
