@@ -19,7 +19,8 @@ spring:
           jwk-set-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/certs
   data:
     mongodb:
-      uri: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${HOST:localhost}:${MONGO_PORT:27017}/mongo-account
+      uri: mongodb://${MONGO_USERNAME:accounts}:${MONGO_PASSWORD:1234}@${HOST:localhost}:${MONGO_PORT:27018}/mongo
+      -account-db
 
 
 management:
