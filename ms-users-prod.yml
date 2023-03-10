@@ -28,7 +28,7 @@ dmh:
     server-url: http://18.216.69.221:8080/
     realm: DmhRealm
     client-id: ms-users-client
-    client-secret: ${KCK_USERS_CLIENT_SECRET:0MF1GiXEtO6pn2Ky5UX4qUlZkwmxZVtX}
+    client-secret: ${KCK_USERS_CLIENT_SECRET:dVT1I4AoEevpq3b3pwIO6HnDFBMYfwIZ}
     username: ${KCK_MASTER_USERNAME:admin}
     password: ${KCK_MASTER_PASSWORD:admin}
 
