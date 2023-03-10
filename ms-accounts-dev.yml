@@ -4,8 +4,8 @@ spring:
       client:
         provider:
           keycloak-provider:
-            issuer-uri: http://localhost:8080/realms/DmhRealm
-#            issuer_uri: http://18.221.11.223:8080/realms/DmhRealm
+#            issuer-uri: http://localhost:8080/realms/DmhRealm
+            issuer_uri: http://18.221.11.223:8080/realms/DmhRealm
         registration:
           keycloak-spring-gateway-client:
             provider: keycloak-provider
@@ -16,10 +16,10 @@ spring:
             redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
       resource-server:
         jwt:
-          issuer-uri: http://localhost:8080/realms/DmhRealm
-          jwk-set-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/certs
-#          issuer-uri: http://18.221.11.223:8080/realms/DmhRealm
-#          jwk-set-uri: http://18.221.11.223:8080/realms/DmhRealm/protocol/openid-connect/certs
+#          issuer-uri: http://localhost:8080/realms/DmhRealm
+#          jwk-set-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/certs
+          issuer-uri: http://18.221.11.223:8080/realms/DmhRealm
+          jwk-set-uri: http://18.221.11.223:8080/realms/DmhRealm/protocol/openid-connect/certs
   data:
     mongodb:
       uri: mongodb://${MONGO_USERNAME:accounts}:${MONGO_PASSWORD:1234}@${HOST:localhost}:${MONGO_PORT:27018}/mongo
