@@ -5,21 +5,21 @@ spring:
         provider:
           keycloak-provider:
             #issuer-uri: http://localhost:8080/realms/DmhRealm
-            issuer_uri: http://18.221.11.223:8080/realms/DmhRealm
+            issuer_uri: http://18.216.69.221:8080/realms/DmhRealm
         registration:
           keycloak-spring-accounts-client:
             provider: keycloak-provider
             scope: openid
             client-id: ms-accounts-client
-            client-secret: ${KCK_ACCOUNTS_CLIENT_SECRET:jqFQcdM5dKOXvcPeJk2xmfEavnhZHyP3}
+            client-secret: ${KCK_ACCOUNTS_CLIENT_SECRET:0E9h8dnhkHscXBVOawrH61nFlP389OYV}
             authorization-grant-type: authorization_code
             redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
       resource-server:
         jwt:
           #issuer-uri: http://localhost:8080/realms/DmhRealm
           #jwk-set-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/certs
-          issuer-uri: http://18.221.11.223:8080/realms/DmhRealm
-          jwk-set-uri: http://18.221.11.223:8080/realms/DmhRealm/protocol/openid-connect/certs
+          issuer-uri: http://18.216.69.221:8080/realms/DmhRealm
+          jwk-set-uri: http://18.216.69.221:8080/realms/DmhRealm/protocol/openid-connect/certs
   data:
     mongodb:
       uri: mongodb://${MONGO_USERNAME:accounts}:${MONGO_PASSWORD:1234}@${HOST:localhost}:${MONGO_PORT:27018}/mongo
