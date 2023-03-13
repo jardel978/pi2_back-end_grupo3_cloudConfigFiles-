@@ -7,7 +7,7 @@ spring:
             issuer-uri: http://localhost:8080/realms/DmhRealm
 #            issuer_uri: http://18.221.11.223:8080/realms/DmhRealm
         registration:
-          keycloak-spring-gateway-client:
+          keycloak-spring-accounts-client:
             provider: keycloak-provider
             scope: openid
             client-id: ms-accounts-client
