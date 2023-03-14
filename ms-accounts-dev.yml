@@ -23,14 +23,14 @@ spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/dba-accounts?useTimezone=true&serverTimezone=UTC&createDatabaseIfNotExist=true
+    hikari.auto-commit: 'true'
     username: root
     password: root
 
   jpa:
     hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
     hibernate.ddl-auto: update
-    hibernate:
-      jdbc: time_zone = TimeZone 
+    hibernate.jdbc: time_zone = TimeZone 
 
 management:
   info:
