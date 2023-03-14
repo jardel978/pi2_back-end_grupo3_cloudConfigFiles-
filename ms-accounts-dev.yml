@@ -21,7 +21,8 @@ spring:
 #          issuer-uri: http://18.221.11.223:8080/realms/DmhRealm
 #          jwk-set-uri: http://18.221.11.223:8080/realms/DmhRealm/protocol/openid-connect/certs
   datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
+    #driverClassName: com.mysql.cj.jdbc.Driver
+    driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/dba-accounts?useTimezone=true&serverTimezone=UTC&createDatabaseIfNotExist=true
     hikari.auto-commit: 'true'
     username: root
