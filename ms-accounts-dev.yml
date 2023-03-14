@@ -32,7 +32,8 @@ spring:
   jpa:
     hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
     hibernate.ddl-auto: update
-    #hibernate.jdbc: time_zone = TimeZone 
+    hibernate.jdbc: time_zone = TimeZone 
+    generate-ddl: true
     show-sql: true
 
 management:
