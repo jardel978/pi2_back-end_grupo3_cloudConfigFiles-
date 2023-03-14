@@ -27,11 +27,10 @@ spring:
     url: jdbc:mysql://localhost:3306/dba_accounts?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimeZone=UTC
    #url: jdbc:mysql://localhost:3306/avaliacao2_movie?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimeZone=UTC
   jpa:
-    properties.hibernate.dialect: org.hibernate.dialect.MySQLDialect
-    storage_engine: innodb
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
     hibernate.ddl-auto: create
     generate-ddl: true
-    show-sql: true 
+    show-sql: true
 
 management:
   info:
