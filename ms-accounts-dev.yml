@@ -22,9 +22,9 @@ spring:
 #          jwk-set-uri: http://18.221.11.223:8080/realms/DmhRealm/protocol/openid-connect/certs
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/forum?useTimezone=true&serverTimezone=UTC&createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/dba-accounts?useTimezone=true&serverTimezone=UTC&createDatabaseIfNotExist=true
     username: root
-    password: 
+    password: root
 
   jpa:
     hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
