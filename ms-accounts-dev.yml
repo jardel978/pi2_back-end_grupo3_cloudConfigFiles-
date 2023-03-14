@@ -21,20 +21,16 @@ spring:
 #          issuer-uri: http://18.221.11.223:8080/realms/DmhRealm
 #          jwk-set-uri: http://18.221.11.223:8080/realms/DmhRealm/protocol/openid-connect/certs
   datasource:
-    #driverClassName: com.mysql.cj.jdbc.Driver
-    driverClassName: com.mysql.jdbc.Driver
-    #url: jdbc:mysql://localhost:3306/dba-accounts?useTimezone=true&serverTimezone=UTC&createDatabaseIfNotExist=true
-    url: jdbc:mysql://localhost:3306/dba-accounts?createDatabaseIfNotExist=true
-    hikari.auto-commit: 'true'
+    driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
-
+    url: jdbc:mysql://localhost:3306/dba-accounts?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimeZone=UTC
+   #url: jdbc:mysql://localhost:3306/avaliacao2_movie?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimeZone=UTC
   jpa:
-    hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
     hibernate.ddl-auto: update
-    hibernate.jdbc: time_zone = TimeZone 
     generate-ddl: true
-    show-sql: true
+    show-sql: true 
 
 management:
   info:
