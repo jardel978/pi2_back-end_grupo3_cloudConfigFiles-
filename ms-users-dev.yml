@@ -24,8 +24,7 @@ spring:
 
 dmh:
   keycloak:
-    #server-url: http://localhost:8080/
-    server-url: http://18.221.11.223:8080/
+    server-url: http://localhost:8080/
     realm: DmhRealm
     client-id: ms-users-client
     client-secret: ${KCK_USERS_CLIENT_SECRET:0MF1GiXEtO6pn2Ky5UX4qUlZkwmxZVtX}
