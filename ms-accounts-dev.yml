@@ -32,7 +32,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
     hibernate:
-        ddl-auto: update
+        ddl-auto: create
     generate-ddl: true
     show-sql: true
   logging: 
