@@ -26,15 +26,27 @@ spring:
     password: root
     url: jdbc:mysql://localhost:3306/dba_accounts?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimeZone=UTC
    #url: jdbc:mysql://localhost:3306/avaliacao2_movie?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimeZone=UTC
+#   jpa:
+#     properties: 
+#       hibernate:
+#         dialect: org.hibernate.dialect.MySQL8Dialect
+#         format_sql: true
+#     hibernate:
+#         ddl-auto: create
+#     generate-ddl: true
+#     show-sql: true
   jpa:
-    properties: 
+    properties:
+      javax:
+        persistence:
+          schema-generation:
+            scripts:
+              create-target: create.sql
+              action: create
+            create-source: metadata
       hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
-        format_sql: true
-    hibernate:
-        ddl-auto: create
-    generate-ddl: true
-    show-sql: true
+        hbm2ddl:
+          delimiter: '; '
   logging: 
     levelorg: 
       hibernate: 
