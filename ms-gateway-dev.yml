@@ -11,9 +11,9 @@ spring:
         - id: ms-accounts
           uri: lb://MS-ACCOUNTS
           predicates:
-            - Path=/accounts/**
-          filters:
-            - StripPrefix=2
+            - Path=/accounts/**, /cards/**
+#          filters:
+#            - StripPrefix=2
   security:
     oauth2:
       client:
