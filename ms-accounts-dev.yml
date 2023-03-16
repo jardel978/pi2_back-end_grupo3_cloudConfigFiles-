@@ -5,6 +5,7 @@ spring:
         provider:
           keycloak-provider:
             issuer-uri: http://localhost:8080/realms/DmhRealm
+            token-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/token
 #            issuer_uri: http://18.221.11.223:8080/realms/DmhRealm
         registration:
           keycloak-spring-accounts-client:
