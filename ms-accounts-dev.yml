@@ -5,8 +5,6 @@ spring:
         provider:
           keycloak-provider:
             issuer-uri: http://localhost:8080/realms/DmhRealm
-            token-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/token
-#            issuer_uri: http://18.221.11.223:8080/realms/DmhRealm
         registration:
           keycloak-spring-accounts-client:
             provider: keycloak-provider
@@ -19,14 +17,12 @@ spring:
         jwt:
           issuer-uri: http://localhost:8080/realms/DmhRealm
           jwk-set-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/certs
-#          issuer-uri: http://18.221.11.223:8080/realms/DmhRealm
-#          jwk-set-uri: http://18.221.11.223:8080/realms/DmhRealm/protocol/openid-connect/certs
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
     url: jdbc:mysql://localhost:3306/dba_accounts?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimeZone=UTC
-   #url: jdbc:mysql://localhost:3306/avaliacao2_movie?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimeZone=UTC
   jpa:
     properties: 
       hibernate:
