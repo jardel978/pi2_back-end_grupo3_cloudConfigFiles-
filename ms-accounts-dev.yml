@@ -13,7 +13,6 @@ spring:
         provider:
           keycloak:
             issuer-uri: http://localhost:8080/realms/DmhRealm
-            token-uri: http://localhost:8083/auth/realms/DmhRealm/protocol/openid-connect/token
       resource-server:
         jwt:
           issuer-uri: http://localhost:8080/realms/DmhRealm
