@@ -21,7 +21,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${ACCOUNT_USERNAME_DB:root}
-    password: ${ACCOUNTS_PASSWORD_DB:root}
+    password: ${ACCOUNT_PASSWORD_DB:root}
     url: jdbc:mysql://localhost:${ACCOUNT_DB_PORT:3306}/dba_accounts?allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimeZone=UTC
   jpa:
     properties: 
