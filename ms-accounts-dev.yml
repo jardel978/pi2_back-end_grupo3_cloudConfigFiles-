@@ -12,6 +12,7 @@ spring:
             redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
         provider:
           keycloak:
+            token-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/token
             issuer-uri: http://localhost:8080/realms/DmhRealm
       resource-server:
         jwt:
