@@ -8,7 +8,7 @@ spring:
             scope: openid
             client-id: ms-accounts-client
             client-secret: ${KCK_ACCOUNTS_CLIENT_SECRET:jqFQcdM5dKOXvcPeJk2xmfEavnhZHyP3}
-            authorization-grant-type: authorization_code
+            authorization-grant-type: client_credentials
             redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
         provider:
           keycloak:
