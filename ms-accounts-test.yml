@@ -1,0 +1,85 @@
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak-spring-accounts-client:
+            provider: keycloak
+            scope: openid
+            client-id: ms-accounts-client
+            client-secret: ${KCK_ACCOUNTS_CLIENT_SECRET:jqFQcdM5dKOXvcPeJk2xmfEavnhZHyP3}
+            authorization-grant-type: client_credentials
+            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
+        provider:
+          keycloak:
+            token-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/token
+            issuer-uri: http://localhost:8080/realms/DmhRealm
+      resource-server:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/DmhRealm
+          jwk-set-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/certs
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${ACCOUNT_USERNAME_DB:root}
+    password: ${ACCOUNT_PASSWORD_DB:root}
+    url: jdbc:mysql://localhost:${ACCOUNT_DB_PORT:3306}/dbaccounts?allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimeZone=UTC
+  jpa:
+    properties: 
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    hibernate:
+        ddl-auto: create
+    generate-ddl: true
+    show-sql: true
+#   jpa:
+#     properties:
+#       javax:
+#         persistence:
+#           schema-generation:
+#             scripts:
+#               create-target: create.sql
+#               action: create
+#             create-source: metadata
+#       hibernate:
+#         hbm2ddl:
+#           delimiter: '; '
+  logging: 
+    levelorg: 
+      hibernate: 
+        SQL: DEBUG
+        type: trace
+#           descriptor.sql.BasicBinder=TRACE
+
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+info:
+  name: Servico de contas no ecossistema da aplicacao.
+  author: Grupo 03
+  severity: Alto
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+  pattern:
+    dateformat: 'dd-MM-yyyy HH:mm:ss.SSS'
+    console: '%clr(%d{"dd-MM-yyyy''T''HH:mm:ss"}){faint} %highlight(%clr(${LOG_LEVEL_PATTERN:-%5p})) %clr(${PID:- })
+    %clr(---){faint} %clr([%15.15t]){faint} %clr([%-40.40logger{39}]:%line){cyan} %clr(-){faint} %m%n%wEx'
