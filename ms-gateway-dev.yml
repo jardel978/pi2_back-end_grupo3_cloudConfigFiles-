@@ -37,7 +37,7 @@ spring:
             scope: openid
             client-id: ms-gateway-client
             client-secret: ${KCK_GATEWAY_CLIENT_SECRET:2EsaCfgAhbQQrB45LyGHmyw9R3U1M7Uu}
-            authorization-grant-type: authorization_code
+            authorization-grant-type: client_credentials
             redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
       resource-server:
         jwt:
