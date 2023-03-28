@@ -37,7 +37,7 @@ spring:
             client-id: ms-gateway-client
             client-secret: ${KCK_GATEWAY_CLIENT_SECRET:2EsaCfgAhbQQrB45LyGHmyw9R3U1M7Uu}
             authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
+            redirect-uri: http://keycloak/login/oauth2/code/keycloak
       resource-server:
         jwt:
           issuer-uri: http://keycloak:8080/realms/DmhRealm
