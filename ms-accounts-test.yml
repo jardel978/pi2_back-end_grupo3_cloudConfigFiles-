@@ -6,7 +6,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka
 
 spring:
   security:
@@ -35,29 +35,29 @@ spring:
     password: ${ACCOUNT_PASSWORD_DB:root}
     url: jdbc:mysql://localhost:${ACCOUNT_DB_PORT:3306}/dbaccounts?allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimeZone=UTC
   jpa:
-    properties: 
+    properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
     hibernate:
-        ddl-auto: create
+      ddl-auto: create
     generate-ddl: true
     show-sql: true
-#   jpa:
-#     properties:
-#       javax:
-#         persistence:
-#           schema-generation:
-#             scripts:
-#               create-target: create.sql
-#               action: create
-#             create-source: metadata
-#       hibernate:
-#         hbm2ddl:
-#           delimiter: '; '
-  logging: 
-    levelorg: 
-      hibernate: 
+  #   jpa:
+  #     properties:
+  #       javax:
+  #         persistence:
+  #           schema-generation:
+  #             scripts:
+  #               create-target: create.sql
+  #               action: create
+  #             create-source: metadata
+  #       hibernate:
+  #         hbm2ddl:
+  #           delimiter: '; '
+  logging:
+    levelorg:
+      hibernate:
         SQL: DEBUG
         type: trace
 #           descriptor.sql.BasicBinder=TRACE

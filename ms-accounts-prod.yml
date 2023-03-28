@@ -1,10 +1,19 @@
+eureka:
+  instance:
+#    hostname: localhost
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka
+
 spring:
   security:
     oauth2:
       client:
         provider:
           keycloak-provider:
-            #issuer-uri: http://localhost:8080/realms/DmhRealm
             issuer_uri: http://18.216.69.221:8080/realms/DmhRealm
         registration:
           keycloak-spring-accounts-client:
@@ -16,8 +25,6 @@ spring:
             redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
       resource-server:
         jwt:
-          #issuer-uri: http://localhost:8080/realms/DmhRealm
-          #jwk-set-uri: http://localhost:8080/realms/DmhRealm/protocol/openid-connect/certs
           issuer-uri: http://18.216.69.221:8080/realms/DmhRealm
           jwk-set-uri: http://18.216.69.221:8080/realms/DmhRealm/protocol/openid-connect/certs
   datasource:
