@@ -32,6 +32,7 @@ spring:
             issuer-uri: http://18.216.69.221:8080/realms/DmhRealm
         registration:
           keycloak-spring-gateway-client:
+            auth-server-url: http://keycloak:8080/
             provider: keycloak-provider
             scope: openid
             client-id: ms-gateway-client
