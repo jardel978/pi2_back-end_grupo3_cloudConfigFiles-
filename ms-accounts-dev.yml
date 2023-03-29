@@ -34,11 +34,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${ACCOUNT_USERNAME_DB:root}
     password: ${ACCOUNT_PASSWORD_DB:root}
-    url: jdbc:mysql://dbAccounts:3308/dbaccounts?autoReconnect=true&createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimeZone=UTC
+    url: jdbc:mysql://dbAccounts:3308/dbaccounts
   jpa:
     properties: 
       hibernate:
-#        dialect: org.hibernate.dialect.MySQL8Dialect
+        dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
     hibernate:
         ddl-auto: create
