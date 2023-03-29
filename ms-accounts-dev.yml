@@ -34,7 +34,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${ACCOUNT_USERNAME_DB:root}
     password: ${ACCOUNT_PASSWORD_DB:root}
-    url: jdbc:mysql://dbAccounts:${ACCOUNT_DB_PORT:3308}/dbaccounts?autoReconnect=true&createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimeZone=UTC
+    url: jdbc:mysql://dbAccounts:3308/dbaccounts?autoReconnect=true&createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimeZone=UTC
   jpa:
     properties: 
       hibernate:
