@@ -32,9 +32,9 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: ${ACCOUNT_USERNAME_DB:root}
-    password: ${ACCOUNT_PASSWORD_DB:root}
-    url: jdbc:mysql://dbAccounts:3308/dbaccounts?autoReconnect=true&createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&useTimezone=true&serverTimeZone=UTC
+    username: ${DATABASE_USER}
+    password: ${DATABASE_PASSWORD}
+    url: jdbc:mysql://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}?autoReconnect=true&createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&useTimezone=true&serverTimeZone=UTC
   jpa:
     properties: 
       hibernate:
