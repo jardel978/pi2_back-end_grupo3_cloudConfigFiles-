@@ -61,7 +61,7 @@ spring:
       hibernate: 
         SQL: DEBUG
         type: trace
-#           descriptor.sql.BasicBinder=TRACE
+           descriptor.sql.BasicBinder=TRACE
 
 management:
   info:
