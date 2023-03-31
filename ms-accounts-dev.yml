@@ -35,27 +35,27 @@ spring:
     username: ${DATABASE_USER}
     password: ${DATABASE_PASSWORD}
     url: jdbc:mysql://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}?autoReconnect=true&createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&useTimezone=true&serverTimeZone=UTC
-  jpa:
-    properties: 
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
-        format_sql: true
-    hibernate:
-        ddl-auto: create
-    generate-ddl: true
-    show-sql: true
-#   jpa:
-#     properties:
-#       javax:
-#         persistence:
-#           schema-generation:
-#             scripts:
-#               create-target: create.sql
-#               action: create
-#             create-source: metadata
-#       hibernate:
-#         hbm2ddl:
-#           delimiter: '; '
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL8Dialect
+#        format_sql: true
+#    hibernate:
+#        ddl-auto: create
+#    generate-ddl: true
+#    show-sql: true
+   jpa:
+     properties:
+       javax:
+         persistence:
+           schema-generation:
+             scripts:
+               create-target: create.sql
+               action: create
+             create-source: metadata
+       hibernate:
+         hbm2ddl:
+           delimiter: '; '
   logging: 
     levelorg: 
       hibernate: 
