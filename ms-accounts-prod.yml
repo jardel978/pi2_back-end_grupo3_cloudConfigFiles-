@@ -49,7 +49,9 @@ spring:
         type: trace
 #           descriptor.sql.BasicBinder=TRACE
 
-
+feign:
+  circuitbreaker:
+    enabled: true
 
 management:
   info:

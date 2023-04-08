@@ -37,6 +37,10 @@ dmh:
     username: ${KCK_MASTER_USERNAME:admin}
     password: ${KCK_MASTER_PASSWORD:admin}
 
+feign:
+  circuitbreaker:
+    enabled: true
+
 management:
   info:
     env:
